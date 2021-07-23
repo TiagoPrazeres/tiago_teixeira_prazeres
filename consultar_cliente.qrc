@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="consultar_cliente">
+    <file>imagens/pesquisar.png</file>
+  </qresource>
+</RCC>

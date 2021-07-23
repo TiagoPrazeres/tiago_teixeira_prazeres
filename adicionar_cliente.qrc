@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="adicionar_cliente">
+    <file>imagens/adicionar.png</file>
+  </qresource>
+</RCC>

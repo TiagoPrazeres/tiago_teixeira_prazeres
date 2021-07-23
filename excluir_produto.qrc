@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="excluir_produto">
+    <file>imagens/deletar2.png</file>
+  </qresource>
+</RCC>

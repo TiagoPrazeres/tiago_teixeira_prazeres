@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="deletar_icon">
+    <file>imagens/deletar.png</file>
+  </qresource>
+</RCC>

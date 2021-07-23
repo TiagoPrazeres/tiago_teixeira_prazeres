@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="editar_produto">
+    <file>imagens/editar2.png</file>
+  </qresource>
+</RCC>

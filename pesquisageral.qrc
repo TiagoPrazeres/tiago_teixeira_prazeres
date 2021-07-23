@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="pesquisageral">
+    <file>imagens/filtro.png</file>
+  </qresource>
+</RCC>

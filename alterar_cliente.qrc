@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="alterar_cliente">
+    <file>imagens/editar.png</file>
+  </qresource>
+</RCC>

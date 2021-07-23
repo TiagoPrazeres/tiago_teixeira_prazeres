@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="pesquisa">
+    <file>imagens/pesquisa.png</file>
+  </qresource>
+</RCC>
