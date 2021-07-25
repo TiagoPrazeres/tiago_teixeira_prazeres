@@ -227,7 +227,7 @@ class Ui_FormCliente(object):
 
         mycursor.close()
 
-################ CADASTRAR CLIENTE ################
+################ ABRIR TELA CADASTRAR CLIENTE ################
     def cadastrarCliente(self):
         variaveisControle.tipoTelaDadosCliente = 'incluir'
 
@@ -236,7 +236,7 @@ class Ui_FormCliente(object):
         self.ui.setupUi(self.formDadosCliente)
         self.formDadosCliente.show()
 
-################ CONSULTAR CLIENTE ################
+################ ABRIR TELA CONSULTAR CLIENTE ################
     def consultarCliente(self):
         line = self.tb_cliente.currentRow()
         root = tkinter.Tk()
@@ -256,7 +256,7 @@ class Ui_FormCliente(object):
             self.ui.setupUi(self.formDadosCliente)
             self.formDadosCliente.show()
 
-################ ALTERAR CLIENTE ################
+################ ABRIR TELA ALTERAR CLIENTE ################
     def alterarCliente(self):
         line = self.tb_cliente.currentRow()
         root = tkinter.Tk()
@@ -320,6 +320,7 @@ class Ui_FormCliente(object):
             self.tb_cliente.resizeColumnsToContents()
             self.tb_cliente.resizeRowsToContents()
             mycursor.close()
+            messagebox.showinfo("Excluido", "EXCLUIDO COM SUCESSO")
 
 
 import adicionar_cliente

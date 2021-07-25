@@ -236,7 +236,7 @@ class Ui_FormProduto(object):
 
         mycursor.close()
 
-################ CADASTRAR PRODUTO ################
+################ ABRIR TELA CADASTRAR PRODUTO ################
     def cadastrarProduto(self):
         variaveisControle.tipoTelaDadosProduto = 'incluir'
 
@@ -245,7 +245,7 @@ class Ui_FormProduto(object):
         self.ui.setupUi(self.formDadosProdutos)
         self.formDadosProdutos.show()
 
-################ ALTERAR PRODUTO ################
+################ ABRIR TELA ALTERAR PRODUTO ################
     def alterarProduto(self):
         line = self.tb_produto.currentRow()
         root = tkinter.Tk()
@@ -265,7 +265,7 @@ class Ui_FormProduto(object):
             self.ui.setupUi(self.formDadosProdutos)
             self.formDadosProdutos.show()
 
-################ CONSULTAR PRODUTO ################
+################ ABRIR TELA CONSULTAR PRODUTO ################
     def consultarProduto(self):
         line = self.tb_produto.currentRow()
         root = tkinter.Tk()
@@ -329,6 +329,7 @@ class Ui_FormProduto(object):
             self.tb_produto.resizeColumnsToContents()
             self.tb_produto.resizeRowsToContents()
             mycursor.close()
+            messagebox.showinfo("Excluido", "EXCLUIDO COM SUCESSO")
 
 import adicionar_cliente
 import adicionar_produto

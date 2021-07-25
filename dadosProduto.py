@@ -182,8 +182,10 @@ class Ui_formDadosProdutos(object):
             self.txt_valor.setText(valorProduto)
             self.txt_tipo.setText(tipoProduto)
 
+##################################################################################################
+##################################### FUNÇÕES DO SISTEMA #########################################
+##################################################################################################
 
-    ### FUNÇÕES SISTEMA ###
     ## Sair dadosProduto ##
     def sairTela(self, formDadosProduto):
         variaveisControle.tipoTelaDadosProduto == ''
@@ -217,6 +219,7 @@ class Ui_formDadosProdutos(object):
             self.txt_produto.setText("")
             self.txt_valor.setText("")
             self.txt_tipo.setText("")
+            messagebox.showinfo("Cadastrado", "CADASTRADO COM SUCESSO")
 
         ## ALTERAR PRODUTO ##
     def alterarProduto(self):
@@ -242,6 +245,7 @@ class Ui_formDadosProdutos(object):
             mycursor.execute(sql)
             mydb.commit()
             mycursor.close()
+            messagebox.showinfo("Alterado", "ALTERADO COM SUCESSO")
 
 import cancelar
 import confirmar

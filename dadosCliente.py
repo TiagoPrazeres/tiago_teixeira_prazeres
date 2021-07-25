@@ -112,7 +112,10 @@ class Ui_formDadosCliente(object):
         self.bt_cadastrar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p><img src=\":/confirmar/imagens/confirmar.png\"/></p></body></html>"))
         self.bt_cancelar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p><img src=\":/cancelar/imagens/cancelar.png\"/></p></body></html>"))
 
-        ### Botões sistema ###
+##################################################################################################
+######################################### BOTÕES SISTEMA #########################################
+##################################################################################################
+
         self.bt_cancelar.clicked.connect(lambda: self.sairTela(formDadosCliente))
         if variaveisControle.tipoTelaDadosCliente == 'incluir':
             self.bt_cadastrar.clicked.connect(self.cadastrarCliente)
@@ -179,8 +182,10 @@ class Ui_formDadosCliente(object):
             self.txt_telefone.setText(telefoneCliente)
             self.txt_cidade.setText(cidadeCliente)
 
+##################################################################################################
+##################################### FUNÇÕES DO SISTEMA #########################################
+##################################################################################################
 
-    ### FUNÇÕES SISTEMA ###
     ## Sair dadosCliente ##
     def sairTela(self, formDadosCliente):
         variaveisControle.tipoTelaDadosCliente == ''
@@ -215,6 +220,8 @@ class Ui_formDadosCliente(object):
             self.txt_nome.setText("")
             self.txt_telefone.setText("")
             self.txt_cidade.setText("")
+            messagebox.showinfo("Cadastrado", "CADASTRADO COM SUCESSO")
+            
 
     ## ALTERAR CLIENTE ##
     def alterarCliente(self):
@@ -240,6 +247,7 @@ class Ui_formDadosCliente(object):
             mycursor.execute(sql)
             mydb.commit()
             mycursor.close()
+            messagebox.showinfo("Alterado", "ALTERADO COM SUCESSO")
 
 import cancelar
 import confirmar

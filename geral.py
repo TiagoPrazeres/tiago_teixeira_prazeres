@@ -87,6 +87,7 @@ class Ui_FormGeral(object):
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################
 ##################################################################################################
+
         self.bt_sair.clicked.connect(lambda: self.sairSistema(FormGeral)) # Fecha o Sistema #
         self.bt_cliente.clicked.connect(self.telaCliente) # botão Cliente abre telaCliente #
         self.bt_produtos.clicked.connect(self.telaProduto) # botão Produto abre telaProduto
