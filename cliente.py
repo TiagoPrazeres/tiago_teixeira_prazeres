@@ -100,7 +100,7 @@ class Ui_FormCliente(object):
         self.tb_cliente.setFont(font)
         self.tb_cliente.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.tb_cliente.setObjectName("tb_cliente")
-        self.tb_cliente.setColumnCount(3)
+        self.tb_cliente.setColumnCount(4)
         self.tb_cliente.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -123,13 +123,20 @@ class Ui_FormCliente(object):
         font.setWeight(75)
         item.setFont(font)
         self.tb_cliente.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        item.setFont(font)
+        self.tb_cliente.setHorizontalHeaderItem(3, item)
 
         self.retranslateUi(FormCliente)
         QtCore.QMetaObject.connectSlotsByName(FormCliente)
 
     def retranslateUi(self, FormCliente):
         _translate = QtCore.QCoreApplication.translate
-        FormCliente.setWindowTitle(_translate("FormCliente", "Cliente"))
+        FormCliente.setWindowTitle(_translate("FormCliente", "Form"))
         self.bt_adicionar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/adicionar_cliente/imagens/adicionar.png\"/></p></body></html>"))
         self.bt_alterar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/alterar_cliente/imagens/editar.png\"/></p></body></html>"))
         self.bt_consultar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/consultar_cliente/imagens/pesquisar.png\"/></p></body></html>"))
@@ -141,8 +148,10 @@ class Ui_FormCliente(object):
         item = self.tb_cliente.horizontalHeaderItem(0)
         item.setText(_translate("FormCliente", "ID"))
         item = self.tb_cliente.horizontalHeaderItem(1)
-        item.setText(_translate("FormCliente", "Telefone"))
+        item.setText(_translate("FormCliente", "Nome"))
         item = self.tb_cliente.horizontalHeaderItem(2)
+        item.setText(_translate("FormCliente", "Telefone"))
+        item = self.tb_cliente.horizontalHeaderItem(3)
         item.setText(_translate("FormCliente", "Cidade"))
 
 ##################################################################################################
