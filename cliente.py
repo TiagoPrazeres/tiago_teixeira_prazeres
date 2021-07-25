@@ -136,7 +136,7 @@ class Ui_FormCliente(object):
 
     def retranslateUi(self, FormCliente):
         _translate = QtCore.QCoreApplication.translate
-        FormCliente.setWindowTitle(_translate("FormCliente", "Form"))
+        FormCliente.setWindowTitle(_translate("FormCliente", "Cliente"))
         self.bt_adicionar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/adicionar_cliente/imagens/adicionar.png\"/></p></body></html>"))
         self.bt_alterar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/alterar_cliente/imagens/editar.png\"/></p></body></html>"))
         self.bt_consultar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/consultar_cliente/imagens/pesquisar.png\"/></p></body></html>"))
