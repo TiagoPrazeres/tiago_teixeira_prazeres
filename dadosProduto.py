@@ -109,8 +109,8 @@ class Ui_formDadosProdutos(object):
         self.lb_nomeProduto.setText(_translate("formDadosProdutos", "Nome Produto:"))
         self.lb_tipo.setText(_translate("formDadosProdutos", "Tipo Produto:"))
         self.lb_valor.setText(_translate("formDadosProdutos", "Valor Produto:"))
-        self.bt_cadastrar.setToolTip(_translate("formDadosProdutos", "<html><head/><body><p><img src=\":/confirmar/imagens/confirmar.png\"/></p></body></html>"))
-        self.bt_cancelar.setToolTip(_translate("formDadosProdutos", "<html><head/><body><p><img src=\":/cancelar/imagens/cancelar.png\"/></p></body></html>"))
+        self.bt_cadastrar.setToolTip(_translate("formDadosProdutos", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Confirmar</span></p></body></html>"))
+        self.bt_cancelar.setToolTip(_translate("formDadosProdutos", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Cancelar</span></p></body></html>"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################

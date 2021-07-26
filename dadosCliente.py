@@ -109,8 +109,8 @@ class Ui_formDadosCliente(object):
         self.lb_nome.setText(_translate("formDadosCliente", "Nome:"))
         self.lb_cidade.setText(_translate("formDadosCliente", "Cidade:"))
         self.lb_telefone.setText(_translate("formDadosCliente", "Telefone:"))
-        self.bt_cadastrar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p><img src=\":/confirmar/imagens/confirmar.png\"/></p></body></html>"))
-        self.bt_cancelar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p><img src=\":/cancelar/imagens/cancelar.png\"/></p></body></html>"))
+        self.bt_cadastrar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Confirmar</span></p></body></html>"))
+        self.bt_cancelar.setToolTip(_translate("formDadosCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Cancelar</span></p></body></html>"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################
