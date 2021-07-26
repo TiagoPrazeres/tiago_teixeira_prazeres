@@ -30,7 +30,7 @@ datatabase = variaveisControle.database
 class Ui_FormCliente(object):
     def setupUi(self, FormCliente):
         FormCliente.setObjectName("FormCliente")
-        FormCliente.resize(812, 735)
+        FormCliente.resize(812, 788)
         FormCliente.setStyleSheet("background-color: rgb(129, 181, 200);")
         self.bt_adicionar = QtWidgets.QPushButton(FormCliente)
         self.bt_adicionar.setGeometry(QtCore.QRect(20, 20, 111, 101))
@@ -99,6 +99,7 @@ class Ui_FormCliente(object):
         font.setPointSize(12)
         self.tb_cliente.setFont(font)
         self.tb_cliente.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.tb_cliente.setTextElideMode(QtCore.Qt.ElideRight)
         self.tb_cliente.setObjectName("tb_cliente")
         self.tb_cliente.setColumnCount(4)
         self.tb_cliente.setRowCount(0)
@@ -130,6 +131,27 @@ class Ui_FormCliente(object):
         font.setWeight(75)
         item.setFont(font)
         self.tb_cliente.setHorizontalHeaderItem(3, item)
+        self.txt_totalCliente = QtWidgets.QLineEdit(FormCliente)
+        self.txt_totalCliente.setGeometry(QtCore.QRect(690, 727, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.txt_totalCliente.setFont(font)
+        self.txt_totalCliente.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-style: outset;\n"
+"border-color: black;\n"
+"border-width: 1px")
+        self.txt_totalCliente.setText("")
+        self.txt_totalCliente.setAlignment(QtCore.Qt.AlignCenter)
+        self.txt_totalCliente.setReadOnly(True)
+        self.txt_totalCliente.setPlaceholderText("")
+        self.txt_totalCliente.setObjectName("txt_totalCliente")
+        self.lb_totalCliente = QtWidgets.QLabel(FormCliente)
+        self.lb_totalCliente.setGeometry(QtCore.QRect(550, 720, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.lb_totalCliente.setFont(font)
+        self.lb_totalCliente.setObjectName("lb_totalCliente")
 
         self.retranslateUi(FormCliente)
         QtCore.QMetaObject.connectSlotsByName(FormCliente)
@@ -137,14 +159,14 @@ class Ui_FormCliente(object):
     def retranslateUi(self, FormCliente):
         _translate = QtCore.QCoreApplication.translate
         FormCliente.setWindowTitle(_translate("FormCliente", "Cliente"))
-        self.bt_adicionar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/adicionar_cliente/imagens/adicionar.png\"/></p></body></html>"))
-        self.bt_alterar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/alterar_cliente/imagens/editar.png\"/></p></body></html>"))
-        self.bt_consultar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/consultar_cliente/imagens/pesquisar.png\"/></p></body></html>"))
-        self.bt_retornar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/voltar/imagens/voltar.png\"/></p></body></html>"))
-        self.bt_excluir.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/excluir_cliente/imagens/deletar.png\"/></p></body></html>"))
+        self.bt_adicionar.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Adicionar Cliente</span></p></body></html>"))
+        self.bt_alterar.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Editar Cliente</span></p></body></html>"))
+        self.bt_consultar.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Consultar Cliente</span></p></body></html>"))
+        self.bt_retornar.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Voltar</span></p></body></html>"))
+        self.bt_excluir.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Excluir Cliente</span></p></body></html>"))
         self.lb_nomeCliente.setText(_translate("FormCliente", "Nome Cliente:"))
-        self.bt_pesquisar.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/pesquisa/imagens/pesquisa.png\"/></p></body></html>"))
-        self.bt_pesquisarGeral.setToolTip(_translate("FormCliente", "<html><head/><body><p><img src=\":/pesquisageral/imagens/filtro.png\"/></p></body></html>"))
+        self.bt_pesquisar.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Consultar Cliente por Nome</span></p></body></html>"))
+        self.bt_pesquisarGeral.setToolTip(_translate("FormCliente", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Verificar Lista Completa Cliente</span></p></body></html>"))
         item = self.tb_cliente.horizontalHeaderItem(0)
         item.setText(_translate("FormCliente", "ID"))
         item = self.tb_cliente.horizontalHeaderItem(1)
@@ -153,6 +175,7 @@ class Ui_FormCliente(object):
         item.setText(_translate("FormCliente", "Telefone"))
         item = self.tb_cliente.horizontalHeaderItem(3)
         item.setText(_translate("FormCliente", "Cidade"))
+        self.lb_totalCliente.setText(_translate("FormCliente", "Total Cliente:"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################
@@ -201,7 +224,7 @@ class Ui_FormCliente(object):
 
         self.tb_cliente.resizeColumnsToContents()
         self.tb_cliente.resizeRowsToContents()
-
+        self.txt_totalCliente.setText(str(len(myresult)))
         mycursor.close()
 
 ################ PESQUISAR CLIENTE ################
@@ -220,21 +243,26 @@ class Ui_FormCliente(object):
         myresult = mycursor.fetchall()
         df = pd.DataFrame(myresult, columns = ['ID', 'Nome', 'Telefone', 'Cidade'])
         self.all_data = df
+        root = tkinter.Tk()
+        root.withdraw()
 
         ## Carrega o arquivo pelo nome na tabela tb_cliente ##
-        numRows = len(self.all_data.index)
-        self.tb_cliente.setColumnCount(len(self.all_data.columns))
-        self.tb_cliente.setRowCount(numRows)
-        self.tb_cliente.setHorizontalHeaderLabels(self.all_data.columns)
+        if len(myresult) < 1:
+            messagebox.showerror("Erro ao Consultar", "NENHUM REGISTRO ENCONTRADO")
+        else:
+            numRows = len(self.all_data.index)
+            self.tb_cliente.setColumnCount(len(self.all_data.columns))
+            self.tb_cliente.setRowCount(numRows)
+            self.tb_cliente.setHorizontalHeaderLabels(self.all_data.columns)
 
-        for i in range(numRows):
-            for j in range(len(self.all_data.columns)):
-                self.tb_cliente.setItem(i, j, QTableWidgetItem(str(self.all_data.iat[i,j])))
+            for i in range(numRows):
+                for j in range(len(self.all_data.columns)):
+                    self.tb_cliente.setItem(i, j, QTableWidgetItem(str(self.all_data.iat[i,j])))
 
-        self.tb_cliente.resizeColumnsToContents()
-        self.tb_cliente.resizeRowsToContents()
-
-        mycursor.close()
+            self.tb_cliente.resizeColumnsToContents()
+            self.tb_cliente.resizeRowsToContents()
+            self.txt_totalCliente.setText(str(len(myresult)))
+            mycursor.close()
 
 ################ ABRIR TELA CADASTRAR CLIENTE ################
     def cadastrarCliente(self):

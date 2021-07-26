@@ -30,7 +30,7 @@ datatabase = variaveisControle.database
 class Ui_FormProduto(object):
     def setupUi(self, FormProduto):
         FormProduto.setObjectName("FormProduto")
-        FormProduto.resize(812, 735)
+        FormProduto.resize(812, 787)
         FormProduto.setStyleSheet("background-color: rgb(129, 181, 200);")
         self.bt_adicionar = QtWidgets.QPushButton(FormProduto)
         self.bt_adicionar.setGeometry(QtCore.QRect(20, 20, 111, 101))
@@ -130,6 +130,27 @@ class Ui_FormProduto(object):
         font.setWeight(75)
         item.setFont(font)
         self.tb_produto.setHorizontalHeaderItem(3, item)
+        self.lb_totalProduto = QtWidgets.QLabel(FormProduto)
+        self.lb_totalProduto.setGeometry(QtCore.QRect(550, 723, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.lb_totalProduto.setFont(font)
+        self.lb_totalProduto.setObjectName("lb_totalProduto")
+        self.txt_totalProduto = QtWidgets.QLineEdit(FormProduto)
+        self.txt_totalProduto.setGeometry(QtCore.QRect(690, 730, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.txt_totalProduto.setFont(font)
+        self.txt_totalProduto.setStyleSheet("border-radius: 15px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-style: outset;\n"
+"border-color: black;\n"
+"border-width: 1px")
+        self.txt_totalProduto.setText("")
+        self.txt_totalProduto.setAlignment(QtCore.Qt.AlignCenter)
+        self.txt_totalProduto.setDragEnabled(False)
+        self.txt_totalProduto.setReadOnly(True)
+        self.txt_totalProduto.setObjectName("txt_totalProduto")
 
         self.retranslateUi(FormProduto)
         QtCore.QMetaObject.connectSlotsByName(FormProduto)
@@ -137,14 +158,14 @@ class Ui_FormProduto(object):
     def retranslateUi(self, FormProduto):
         _translate = QtCore.QCoreApplication.translate
         FormProduto.setWindowTitle(_translate("FormProduto", "Produto"))
-        self.bt_adicionar.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/adicionar_produto/imagens/adicionar2.png\"/></p></body></html>"))
-        self.bt_alterar.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/editar_produto/imagens/editar2.png\"/></p></body></html>"))
-        self.bt_consultar.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/consultar_produto/imagens/pesquisar2.png\"/></p></body></html>"))
-        self.bt_retornar.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/voltar/imagens/voltar.png\"/></p></body></html>"))
-        self.bt_excluir.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/excluir_produto/imagens/deletar2.png\"/></p></body></html>"))
+        self.bt_adicionar.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Adicionar Produto</span></p></body></html>"))
+        self.bt_alterar.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Edidar Produto</span></p></body></html>"))
+        self.bt_consultar.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Consultar Produto</span></p></body></html>"))
+        self.bt_retornar.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Voltar</span></p></body></html>"))
+        self.bt_excluir.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Excluir Produto</span></p></body></html>"))
         self.lb_nomeCliente.setText(_translate("FormProduto", "Nome Cliente:"))
-        self.bt_pesquisar.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/pesquisa/imagens/pesquisa.png\"/></p></body></html>"))
-        self.bt_pesquisarGeral.setToolTip(_translate("FormProduto", "<html><head/><body><p><img src=\":/pesquisageral/imagens/filtro.png\"/></p></body></html>"))
+        self.bt_pesquisar.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Consultar Produto por Nome</span></p></body></html>"))
+        self.bt_pesquisarGeral.setToolTip(_translate("FormProduto", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Verificar Lista Completa Produto</span></p></body></html>"))
         item = self.tb_produto.horizontalHeaderItem(0)
         item.setText(_translate("FormProduto", "ID"))
         item = self.tb_produto.horizontalHeaderItem(1)
@@ -153,6 +174,7 @@ class Ui_FormProduto(object):
         item.setText(_translate("FormProduto", "Valor"))
         item = self.tb_produto.horizontalHeaderItem(3)
         item.setText(_translate("FormProduto", "Tipo"))
+        self.lb_totalProduto.setText(_translate("FormProduto", "Total Produto:"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################
@@ -201,7 +223,7 @@ class Ui_FormProduto(object):
 
         self.tb_produto.resizeColumnsToContents()
         self.tb_produto.resizeRowsToContents()
-
+        self.txt_totalProduto.setText(str(len(myresult)))
         mycursor.close()
 
 ################ PESQUISAR PRODUTO ################
@@ -220,21 +242,26 @@ class Ui_FormProduto(object):
         myresult = mycursor.fetchall()
         df = pd.DataFrame(myresult, columns = ['ID', 'Nome', 'Valor', 'Tipo'])
         self.all_data = df
+        root = tkinter.Tk()
+        root.withdraw()
 
         ## Carrega o arquivo pelo nome na tabela tb_produto ##
-        numRows = len(self.all_data.index)
-        self.tb_produto.setColumnCount(len(self.all_data.columns))
-        self.tb_produto.setRowCount(numRows)
-        self.tb_produto.setHorizontalHeaderLabels(self.all_data.columns)
+        if len(myresult) < 1:
+            messagebox.showerror("Erro ao Consultar", "NENHUM REGISTRO ENCONTRADO")
+        else:
+            numRows = len(self.all_data.index)
+            self.tb_produto.setColumnCount(len(self.all_data.columns))
+            self.tb_produto.setRowCount(numRows)
+            self.tb_produto.setHorizontalHeaderLabels(self.all_data.columns)
 
-        for i in range(numRows):
-            for j in range(len(self.all_data.columns)):
-                self.tb_produto.setItem(i, j, QTableWidgetItem(str(self.all_data.iat[i,j])))
+            for i in range(numRows):
+                for j in range(len(self.all_data.columns)):
+                    self.tb_produto.setItem(i, j, QTableWidgetItem(str(self.all_data.iat[i,j])))
 
-        self.tb_produto.resizeColumnsToContents()
-        self.tb_produto.resizeRowsToContents()
-
-        mycursor.close()
+            self.tb_produto.resizeColumnsToContents()
+            self.tb_produto.resizeRowsToContents()
+            self.txt_totalProduto.setText(str(len(myresult)))
+            mycursor.close()
 
 ################ ABRIR TELA CADASTRAR PRODUTO ################
     def cadastrarProduto(self):

@@ -215,7 +215,6 @@ class Ui_formDadosCliente(object):
             val = (nomeCliente, telefoneCliente, cidadeCliente)
             mycursor.execute(sql, val)
             mydb.commit()
-            print(mycursor.rowcount, 'record(s) inserted')
             mycursor.close()
             self.txt_nome.setText("")
             self.txt_telefone.setText("")
