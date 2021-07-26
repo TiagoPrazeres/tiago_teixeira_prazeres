@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>812</width>
-    <height>735</height>
+    <height>788</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adicionar_cliente/imagens/adicionar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Adicionar Cliente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/adicionar_cliente/imagens/adicionar.png);
@@ -46,7 +46,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/alterar_cliente/imagens/editar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Editar Cliente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/alterar_cliente/imagens/editar.png);
@@ -66,7 +66,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/consultar_cliente/imagens/pesquisar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Consultar Cliente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/consultar_cliente/imagens/pesquisar.png);
@@ -86,7 +86,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/voltar/imagens/voltar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Voltar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/voltar/imagens/voltar.png);
@@ -106,7 +106,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/excluir_cliente/imagens/deletar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Excluir Cliente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/excluir_cliente/imagens/deletar.png);
@@ -169,7 +169,7 @@ border-width: 1px</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pesquisa/imagens/pesquisa.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Consultar Cliente por Nome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/pesquisa/imagens/pesquisa.png);
@@ -189,7 +189,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pesquisageral/imagens/filtro.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Verificar Lista Completa Cliente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/pesquisageral/imagens/filtro.png);
@@ -216,6 +216,9 @@ background-color: rgb(173, 200, 202);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="textElideMode">
+    <enum>Qt::ElideRight</enum>
    </property>
    <column>
     <property name="text">
@@ -266,15 +269,67 @@ background-color: rgb(173, 200, 202);</string>
     </property>
    </column>
   </widget>
+  <widget class="QLineEdit" name="txt_totalCliente">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>727</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 15px;
+background-color: rgb(255, 255, 255);
+border-style: outset;
+border-color: black;
+border-width: 1px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_totalCliente">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>720</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Total Clientes:</string>
+   </property>
+  </widget>
  </widget>
  <resources>
-  <include location="adicionar_cliente.qrc"/>
-  <include location="pesquisageral.qrc"/>
-  <include location="pesquisa.qrc"/>
-  <include location="voltar.qrc"/>
-  <include location="excluir_cliente.qrc"/>
-  <include location="consultar_cliente.qrc"/>
-  <include location="alterar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/adicionar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisageral.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisa.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/voltar.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/excluir_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/consultar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/alterar_cliente.qrc"/>
  </resources>
  <connections/>
 </ui>

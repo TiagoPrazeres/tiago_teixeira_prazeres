@@ -175,7 +175,7 @@ class Ui_FormCliente(object):
         item.setText(_translate("FormCliente", "Telefone"))
         item = self.tb_cliente.horizontalHeaderItem(3)
         item.setText(_translate("FormCliente", "Cidade"))
-        self.lb_totalCliente.setText(_translate("FormCliente", "Total Cliente:"))
+        self.lb_totalCliente.setText(_translate("FormCliente", "Total Clientes:"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################

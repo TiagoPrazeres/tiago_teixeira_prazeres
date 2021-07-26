@@ -131,7 +131,7 @@ class Ui_FormProduto(object):
         item.setFont(font)
         self.tb_produto.setHorizontalHeaderItem(3, item)
         self.lb_totalProduto = QtWidgets.QLabel(FormProduto)
-        self.lb_totalProduto.setGeometry(QtCore.QRect(550, 723, 131, 41))
+        self.lb_totalProduto.setGeometry(QtCore.QRect(540, 723, 141, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lb_totalProduto.setFont(font)
@@ -174,7 +174,7 @@ class Ui_FormProduto(object):
         item.setText(_translate("FormProduto", "Valor"))
         item = self.tb_produto.horizontalHeaderItem(3)
         item.setText(_translate("FormProduto", "Tipo"))
-        self.lb_totalProduto.setText(_translate("FormProduto", "Total Produto:"))
+        self.lb_totalProduto.setText(_translate("FormProduto", "Total Produtos:"))
 
 ##################################################################################################
 ######################################### BOTÕES SISTEMA #########################################

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>812</width>
-    <height>735</height>
+    <height>787</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adicionar_produto/imagens/adicionar2.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Adicionar Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/adicionar_produto/imagens/adicionar2.png);
@@ -46,7 +46,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/editar_produto/imagens/editar2.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Edidar Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/editar_produto/imagens/editar2.png);
@@ -66,7 +66,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/consultar_produto/imagens/pesquisar2.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Consultar Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/consultar_produto/imagens/pesquisar2.png);
@@ -86,7 +86,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/voltar/imagens/voltar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Voltar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/voltar/imagens/voltar.png);
@@ -106,7 +106,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/excluir_produto/imagens/deletar2.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Excluir Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/excluir_produto/imagens/deletar2.png);
@@ -169,7 +169,7 @@ border-width: 1px</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pesquisa/imagens/pesquisa.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Consultar Produto por Nome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/pesquisa/imagens/pesquisa.png);
@@ -189,7 +189,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/pesquisageral/imagens/filtro.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Verificar Lista Completa Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/pesquisageral/imagens/filtro.png);
@@ -266,19 +266,71 @@ background-color: rgb(173, 200, 202);</string>
     </property>
    </column>
   </widget>
+  <widget class="QLabel" name="lb_totalProduto">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>723</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Total Produtos:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_totalProduto">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>730</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 15px;
+background-color: rgb(255, 255, 255);
+border-style: outset;
+border-color: black;
+border-width: 1px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <resources>
-  <include location="adicionar_cliente.qrc"/>
-  <include location="excluir_produto.qrc"/>
-  <include location="consultar_produto.qrc"/>
-  <include location="editar_produto.qrc"/>
-  <include location="adicionar_produto.qrc"/>
-  <include location="pesquisageral.qrc"/>
-  <include location="pesquisa.qrc"/>
-  <include location="voltar.qrc"/>
-  <include location="excluir_cliente.qrc"/>
-  <include location="consultar_cliente.qrc"/>
-  <include location="alterar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/adicionar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/excluir_produto.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/consultar_produto.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/editar_produto.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/adicionar_produto.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisageral.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisa.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/voltar.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/excluir_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/consultar_cliente.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/alterar_cliente.qrc"/>
  </resources>
  <connections/>
 </ui>
