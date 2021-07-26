@@ -248,7 +248,7 @@ class Ui_FormCliente(object):
 
         ## Carrega o arquivo pelo nome na tabela tb_cliente ##
         if len(myresult) < 1:
-            messagebox.showerror("Erro ao Consultar", "NENHUM REGISTRO ENCONTRADO")
+            messagebox.showerror("Erro ao Consultar Cliente", "NENHUM CLIENTE ENCONTRADO")
         else:
             numRows = len(self.all_data.index)
             self.tb_cliente.setColumnCount(len(self.all_data.columns))
@@ -272,6 +272,8 @@ class Ui_FormCliente(object):
         self.ui = Ui_formDadosCliente()
         self.ui.setupUi(self.formDadosCliente)
         self.formDadosCliente.show()
+        _translate = QtCore.QCoreApplication.translate
+        self.formDadosCliente.setWindowTitle(_translate("formDadosCliente", "Cadastrar Cliente"))
 
 ################ ABRIR TELA CONSULTAR CLIENTE ################
     def consultarCliente(self):
@@ -280,7 +282,7 @@ class Ui_FormCliente(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Consultar", "ESCOLHA UM ITEM PARA CONSULTAR")
+            messagebox.showerror("Erro ao Consultar Cliente", "ESCOLHA UM CLIENTE PARA CONSULTAR")
         else:
             variaveisControle.tipoTelaDadosCliente = 'consultar'
             #line = self.tb_cliente.currentRow()
@@ -292,6 +294,8 @@ class Ui_FormCliente(object):
             self.ui = Ui_formDadosCliente()
             self.ui.setupUi(self.formDadosCliente)
             self.formDadosCliente.show()
+            _translate = QtCore.QCoreApplication.translate
+            self.formDadosCliente.setWindowTitle(_translate("formDadosCliente", "Consultar Cliente"))
 
 ################ ABRIR TELA ALTERAR CLIENTE ################
     def alterarCliente(self):
@@ -300,18 +304,20 @@ class Ui_FormCliente(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Alterar", "ESCOLHA UM ITEM PARA ALTERAR")
+            messagebox.showerror("Erro ao Alterar Cliente", "ESCOLHA UM CLIENTE PARA ALTERAR")
         else:
             variaveisControle.tipoTelaDadosCliente = 'alterar'
             #line = self.tb_cliente.currentRow()
             item = self.tb_cliente.item(line, 0)
             variaveisControle.idConsulta = item.text()
 
-            # Abertura de Tela consultarCliente #
+            # Abertura de Tela AlterarrCliente #
             self.formDadosCliente = QtWidgets.QWidget()
             self.ui = Ui_formDadosCliente()
             self.ui.setupUi(self.formDadosCliente)
             self.formDadosCliente.show()
+            _translate = QtCore.QCoreApplication.translate
+            self.formDadosCliente.setWindowTitle(_translate("formDadosCliente", "Alterar Cliente"))
 
 ################ EXCLUIR CLIENTE ################
     def excluirCliente(self):
@@ -320,7 +326,7 @@ class Ui_FormCliente(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Excluir", "ESCOLHA UM ITEM PARA EXCLUIR")
+            messagebox.showerror("Erro ao Excluir Cliente", "ESCOLHA UM CLIENTE PARA EXCLUIR")
         else:
             #line = self.tb_cliente.currentRow()
             item = self.tb_cliente.item(line, 0)
@@ -357,7 +363,7 @@ class Ui_FormCliente(object):
             self.tb_cliente.resizeColumnsToContents()
             self.tb_cliente.resizeRowsToContents()
             mycursor.close()
-            messagebox.showinfo("Excluido", "EXCLUIDO COM SUCESSO")
+            messagebox.showinfo("Cliente Excluido", "CLIENTE EXCLUIDO COM SUCESSO")
 
 
 import adicionar_cliente

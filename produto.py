@@ -247,7 +247,7 @@ class Ui_FormProduto(object):
 
         ## Carrega o arquivo pelo nome na tabela tb_produto ##
         if len(myresult) < 1:
-            messagebox.showerror("Erro ao Consultar", "NENHUM REGISTRO ENCONTRADO")
+            messagebox.showerror("Erro ao Consultar Produto", "NENHUM PRODUTO ENCONTRADO")
         else:
             numRows = len(self.all_data.index)
             self.tb_produto.setColumnCount(len(self.all_data.columns))
@@ -271,6 +271,8 @@ class Ui_FormProduto(object):
         self.ui = Ui_formDadosProdutos()
         self.ui.setupUi(self.formDadosProdutos)
         self.formDadosProdutos.show()
+        _translate = QtCore.QCoreApplication.translate
+        self.formDadosProdutos.setWindowTitle(_translate("formDadosProdutos", "Cadastrar Produto"))
 
 ################ ABRIR TELA ALTERAR PRODUTO ################
     def alterarProduto(self):
@@ -279,18 +281,20 @@ class Ui_FormProduto(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Alterar", "ESCOLHA UM ITEM PARA ALTERAR")
+            messagebox.showerror("Erro ao Alterar Produto", "ESCOLHA UM PRODUTO PARA ALTERAR")
         else:
             variaveisControle.tipoTelaDadosProduto = 'alterar'
             #line = self.tb_cliente.currentRow()
             item = self.tb_produto.item(line, 0)
             variaveisControle.idConsulta = item.text()
 
-            # Abertura de Tela consultarCliente #
+            # Abertura de Tela AlterarCliente #
             self.formDadosProdutos = QtWidgets.QWidget()
             self.ui = Ui_formDadosProdutos()
             self.ui.setupUi(self.formDadosProdutos)
             self.formDadosProdutos.show()
+            _translate = QtCore.QCoreApplication.translate
+            self.formDadosProdutos.setWindowTitle(_translate("formDadosProdutos", "Alterar Produto"))
 
 ################ ABRIR TELA CONSULTAR PRODUTO ################
     def consultarProduto(self):
@@ -299,7 +303,7 @@ class Ui_FormProduto(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Consultar", "ESCOLHA UM ITEM PARA CONSULTAR")
+            messagebox.showerror("Erro ao Consultar Produto", "ESCOLHA UM PRODUTO PARA CONSULTAR")
         else:
             variaveisControle.tipoTelaDadosProduto = 'consultar'
             #line = self.tb_cliente.currentRow()
@@ -311,6 +315,8 @@ class Ui_FormProduto(object):
             self.ui = Ui_formDadosProdutos()
             self.ui.setupUi(self.formDadosProdutos)
             self.formDadosProdutos.show()
+            _translate = QtCore.QCoreApplication.translate
+            self.formDadosProdutos.setWindowTitle(_translate("formDadosProdutos", "Consultar Produto"))
 
 ################ EXCLUIR PRODUTO ################
     def excluirProduto(self):
@@ -319,7 +325,7 @@ class Ui_FormProduto(object):
         root.withdraw()
 
         if line < 0:
-            messagebox.showerror("Erro ao Excluir", "ESCOLHA UM ITEM PARA EXCLUIR")
+            messagebox.showerror("Erro ao Excluir Produto", "ESCOLHA UM PRODUTO PARA EXCLUIR")
         else:
             #line = self.tb_cliente.currentRow()
             item = self.tb_produto.item(line, 0)
@@ -356,7 +362,7 @@ class Ui_FormProduto(object):
             self.tb_produto.resizeColumnsToContents()
             self.tb_produto.resizeRowsToContents()
             mycursor.close()
-            messagebox.showinfo("Excluido", "EXCLUIDO COM SUCESSO")
+            messagebox.showinfo("Produto Excluido", "PRODUTO EXCLUIDO COM SUCESSO")
 
 import adicionar_cliente
 import adicionar_produto

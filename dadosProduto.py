@@ -200,7 +200,7 @@ class Ui_formDadosProdutos(object):
         root.withdraw()
 
         if nomeProduto == "" or valorProduto == "" or tipoProduto == "":
-            messagebox.showerror("Erro ao Cadastrar", "PREENCHA TODOS OS CAMPOS PARA CADASTRAR")
+            messagebox.showerror("Erro ao Cadastrar Produto", "PREENCHA TODOS OS CAMPOS PARA CADASTRAR PRODUTO")
         else:
 
             mydb = mysql.connector.connect(
@@ -219,7 +219,7 @@ class Ui_formDadosProdutos(object):
             self.txt_produto.setText("")
             self.txt_valor.setText("")
             self.txt_tipo.setText("")
-            messagebox.showinfo("Cadastrado", "CADASTRADO COM SUCESSO")
+            messagebox.showinfo("Produto Cadastrado", "PRODUTO CADASTRADO COM SUCESSO")
 
         ## ALTERAR PRODUTO ##
     def alterarProduto(self):
@@ -230,7 +230,7 @@ class Ui_formDadosProdutos(object):
         root.withdraw()
 
         if nomeProduto == "" or valorProduto == "" or tipoProduto == "":
-                messagebox.showerror("Erro ao Alterar", "PREENCHA TODOS OS CAMPOS PARA ALTERAR")
+                messagebox.showerror("Erro ao Alterar Produto", "PREENCHA TODOS OS CAMPOS PARA ALTERAR PRODUTO")
         else:
 
             mydb = mysql.connector.connect(
@@ -245,7 +245,7 @@ class Ui_formDadosProdutos(object):
             mycursor.execute(sql)
             mydb.commit()
             mycursor.close()
-            messagebox.showinfo("Alterado", "ALTERADO COM SUCESSO")
+            messagebox.showinfo("Produto Alterado", "PRODUTO ALTERADO COM SUCESSO")
 
 import cancelar
 import confirmar

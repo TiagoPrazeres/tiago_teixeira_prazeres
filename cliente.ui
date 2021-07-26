@@ -323,13 +323,13 @@ border-width: 1px</string>
   </widget>
  </widget>
  <resources>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/adicionar_cliente.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisageral.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/pesquisa.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/voltar.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/excluir_cliente.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/consultar_cliente.qrc"/>
-  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/alterar_cliente.qrc"/>
+  <include location="adicionar_cliente.qrc"/>
+  <include location="pesquisageral.qrc"/>
+  <include location="pesquisa.qrc"/>
+  <include location="voltar.qrc"/>
+  <include location="excluir_cliente.qrc"/>
+  <include location="consultar_cliente.qrc"/>
+  <include location="alterar_cliente.qrc"/>
  </resources>
  <connections/>
 </ui>

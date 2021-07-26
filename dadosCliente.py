@@ -200,7 +200,7 @@ class Ui_formDadosCliente(object):
         root.withdraw()
 
         if nomeCliente == "" or telefoneCliente == "" or cidadeCliente == "":
-            messagebox.showerror("Erro ao Cadastrar", "PREENCHA TODOS OS CAMPOS PARA CADASTRAR")
+            messagebox.showerror("Erro ao Cadastrar Cliente", "PREENCHA TODOS OS CAMPOS PARA CADASTRAR CLIENTE")
         else:
 
             mydb = mysql.connector.connect(
@@ -219,7 +219,7 @@ class Ui_formDadosCliente(object):
             self.txt_nome.setText("")
             self.txt_telefone.setText("")
             self.txt_cidade.setText("")
-            messagebox.showinfo("Cadastrado", "CADASTRADO COM SUCESSO")
+            messagebox.showinfo("Cliente Cadastrado", "CLIENTE CADASTRADO COM SUCESSO")
             
 
     ## ALTERAR CLIENTE ##
@@ -231,7 +231,7 @@ class Ui_formDadosCliente(object):
         root.withdraw()
 
         if nomeCliente == "" or telefoneCliente == "" or cidadeCliente == "":
-            messagebox.showerror("Erro ao Alterar", "PREENCHA TODOS OS CAMPOS PARA ALTERAR")
+            messagebox.showerror("Erro ao Alterar Cliente", "PREENCHA TODOS OS CAMPOS PARA ALTERAR CLIENTE")
         else:
 
             mydb = mysql.connector.connect(
@@ -246,7 +246,7 @@ class Ui_formDadosCliente(object):
             mycursor.execute(sql)
             mydb.commit()
             mycursor.close()
-            messagebox.showinfo("Alterado", "ALTERADO COM SUCESSO")
+            messagebox.showinfo("Cliente Alterado", "CLIENTE ALTERADO COM SUCESSO")
 
 import cancelar
 import confirmar
