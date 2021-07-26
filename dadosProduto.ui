@@ -155,7 +155,7 @@ border-width: 1px</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/deletar_icon/imagens/deletar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Confirmar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/confirmar/imagens/confirmar.png);
@@ -175,7 +175,7 @@ background-color: rgb(173, 200, 202);</string>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/deletar_icon/imagens/deletar.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Cancelar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">image: url(:/cancelar/imagens/cancelar.png);
@@ -187,8 +187,8 @@ background-color: rgb(173, 200, 202);</string>
   </widget>
  </widget>
  <resources>
-  <include location="confirmar.qrc"/>
-  <include location="cancelar.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/confirmar.qrc"/>
+  <include location="../../../Cursos/Python e QT Creator/sistema_login_cliente_produto/cancelar.qrc"/>
  </resources>
  <connections/>
 </ui>
